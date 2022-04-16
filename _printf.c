@@ -26,6 +26,7 @@ static int (*check_for_specifiers(const char *format))(va_list)
 		{"R", print_R},
 		{NULL, NULL}
 	};
+
 	for (i = 0; p[i].t != NULL; i++)
 	{
 		if (*(p[i].t) == *format)
@@ -37,10 +38,10 @@ static int (*check_for_specifiers(const char *format))(va_list)
 }
 
 /**
- * _printf - prints anything
- * @format: list of argument types passed to the function
+ *  _printf - prints anything
+ *  @format: list of argument types passed to the function
  *
- * Return: number of characters printed
+ *  Return: number of characters printed
  */
 int _printf(const char *format, ...)
 {
